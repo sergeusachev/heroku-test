@@ -1,0 +1,1 @@
+rootProject.name = "ru.myback01.back-01"
