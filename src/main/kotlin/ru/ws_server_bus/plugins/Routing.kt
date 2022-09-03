@@ -1,4 +1,4 @@
-package ru.myback01.plugins
+package ru.ws_server_bus.plugins
 
 import io.ktor.server.application.*
 import io.ktor.server.response.*

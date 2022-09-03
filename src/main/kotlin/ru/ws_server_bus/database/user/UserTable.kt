@@ -1,4 +1,4 @@
-package ru.myback01.database.user
+package ru.ws_server_bus.database.user
 
 import org.jetbrains.exposed.sql.Table
 import org.jetbrains.exposed.sql.insert
@@ -33,9 +33,9 @@ object UserTable : Table(name = "users") {
 
                 UserDTO(
                     login = userResult[UserTable.login],
-                    password = userResult[UserTable.password],
-                    email = userResult[UserTable.email],
-                    username = userResult[UserTable.username]
+                    password = userResult[password],
+                    email = userResult[email],
+                    username = userResult[username]
                 )
             }
         } catch (e: Exception) {

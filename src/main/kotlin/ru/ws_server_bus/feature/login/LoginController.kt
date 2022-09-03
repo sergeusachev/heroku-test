@@ -1,12 +1,12 @@
-package ru.myback01.feature.login
+package ru.ws_server_bus.feature.login
 
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
-import ru.myback01.database.token.TokenDTO
-import ru.myback01.database.token.TokenTable
-import ru.myback01.database.user.UserTable
+import ru.ws_server_bus.database.token.TokenDTO
+import ru.ws_server_bus.database.token.TokenTable
+import ru.ws_server_bus.database.user.UserTable
 import java.util.*
 
 class LoginController(private val call: ApplicationCall) {

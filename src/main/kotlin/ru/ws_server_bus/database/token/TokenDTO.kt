@@ -1,4 +1,4 @@
-package ru.myback01.database.token
+package ru.ws_server_bus.database.token
 
 class TokenDTO(
     val id: String,

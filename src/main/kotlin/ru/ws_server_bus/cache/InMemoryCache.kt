@@ -1,6 +1,6 @@
-package ru.myback01.cache
+package ru.ws_server_bus.cache
 
-import ru.myback01.feature.register.RegisterRequest
+import ru.ws_server_bus.feature.register.RegisterRequest
 
 data class TokenCache(
     val login: String,

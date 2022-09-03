@@ -1,15 +1,14 @@
-package ru.myback01.feature.register
+package ru.ws_server_bus.feature.login
 
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class RegisterRequest(
+data class LoginRequest(
     val login: String,
-    val email: String,
     val password: String
 )
 
 @Serializable
-data class RegisterResponse(
+data class LoginResponse(
     val token: String
 )

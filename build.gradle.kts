@@ -13,10 +13,11 @@ plugins {
     id("org.jetbrains.kotlin.plugin.serialization") version "1.7.10"
 }
 
+//TODO Что такое группа?
 group = "ru.myback01"
 version = "0.0.1"
 application {
-    mainClass.set("ru.myback01.ApplicationKt")
+    mainClass.set("ru.ws_server_bus.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")

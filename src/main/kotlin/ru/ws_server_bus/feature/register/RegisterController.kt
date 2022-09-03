@@ -1,15 +1,14 @@
-package ru.myback01.feature.register
+package ru.ws_server_bus.feature.register
 
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
-import org.jetbrains.exposed.sql.insert
-import ru.myback01.database.token.TokenDTO
-import ru.myback01.database.token.TokenTable
-import ru.myback01.database.user.UserDTO
-import ru.myback01.database.user.UserTable
-import ru.myback01.utils.isValidEmail
+import ru.ws_server_bus.database.token.TokenDTO
+import ru.ws_server_bus.database.token.TokenTable
+import ru.ws_server_bus.database.user.UserDTO
+import ru.ws_server_bus.database.user.UserTable
+import ru.ws_server_bus.utils.isValidEmail
 import java.util.*
 
 class RegisterController(private val call: ApplicationCall) {

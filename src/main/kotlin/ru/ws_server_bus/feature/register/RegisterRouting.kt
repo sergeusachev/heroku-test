@@ -1,4 +1,4 @@
-package ru.myback01.feature.register
+package ru.ws_server_bus.feature.register
 
 import io.ktor.server.application.*
 import io.ktor.server.routing.*

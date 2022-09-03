@@ -1,10 +1,9 @@
-package ru.myback01.database.token
+package ru.ws_server_bus.database.token
 
 import org.jetbrains.exposed.sql.Table
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.transactions.transaction
-import ru.myback01.database.user.UserTable
 
 object TokenTable : Table(name = "tokens") {
 
@@ -28,9 +27,9 @@ object TokenTable : Table(name = "tokens") {
         }.single()
 
         return TokenDTO(
-            id = tokenResult[TokenTable.id],
+            id = tokenResult[id],
             login = tokenResult[TokenTable.login],
-            token = tokenResult[TokenTable.token]
+            token = tokenResult[token]
         )
     }
 }

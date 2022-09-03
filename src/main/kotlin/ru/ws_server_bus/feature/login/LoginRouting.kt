@@ -1,4 +1,4 @@
-package ru.myback01.feature.login
+package ru.ws_server_bus.feature.login
 
 import io.ktor.server.application.*
 import io.ktor.server.routing.*

@@ -1,13 +1,12 @@
-package ru.myback01
+package ru.ws_server_bus
 
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
-import kotlinx.serialization.Serializable
 import org.jetbrains.exposed.sql.Database
-import ru.myback01.feature.login.configureLoginRouting
-import ru.myback01.feature.register.RegisterController
-import ru.myback01.feature.register.configureRegisterRouting
-import ru.myback01.plugins.*
+import ru.ws_server_bus.feature.login.configureLoginRouting
+import ru.ws_server_bus.feature.register.configureRegisterRouting
+import ru.ws_server_bus.plugins.configureRouting
+import ru.ws_server_bus.plugins.configureSerialization
 
 fun main() {
     Database.connect(

@@ -1,4 +1,4 @@
-package ru.myback01.database.user
+package ru.ws_server_bus.database.user
 
 class UserDTO(
     val login: String,
