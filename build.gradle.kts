@@ -42,5 +42,7 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
     //Postgres
     implementation("org.postgresql:postgresql:$postgresVersion")
+    //WebSockets
+    implementation("io.ktor:ktor-server-websockets:$ktor_version")
 
 }
