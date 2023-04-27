@@ -9,7 +9,6 @@ import java.util.LinkedHashSet
 import java.util.concurrent.atomic.AtomicInteger
 
 fun Application.configureBusRouting() {
-
     routing {
         webSocket("/echo") {
             send("Please enter your name")
@@ -31,28 +30,20 @@ fun Application.configureBusRouting() {
     }
 
     routing {
-        val connections = Collections.synchronizedSet<Connection?>(LinkedHashSet())
+        val wsConnections = Collections.synchronizedSet<WsConnection?>(LinkedHashSet())
         webSocket("/echoN") {
-            val thisConnection = Connection(this)
-            connections += thisConnection
-            send("You've logged in as [${thisConnection.name}]")
+            val thisWsConnection = WsConnection(this)
+            wsConnections += thisWsConnection
+            send("You've logged in as [${thisWsConnection.name}]")
 
             for (frame in incoming) {
                 frame as? Frame.Text ?: continue
                 val receivedText = frame.readText()
-                val textWithUsername = "[${thisConnection.name}]: $receivedText"
-                connections.forEach {
+                val textWithUsername = "[${thisWsConnection.name}]: $receivedText"
+                wsConnections.forEach {
                     it.session.send(textWithUsername)
                 }
             }
         }
     }
-}
-
-class Connection(val session: DefaultWebSocketServerSession) {
-    companion object {
-        val lastId = AtomicInteger(0)
-    }
-
-    val name = "user${lastId.getAndIncrement()}"
 }
